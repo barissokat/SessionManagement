@@ -10,6 +10,8 @@ namespace SessionManagement.Controllers
     {
         public ActionResult Index()
         {
+            Session.Add("Owner", "Baris Sokat");
+            Session["Owner2"] = "Baris Sokat";
             return View();
         }
 
