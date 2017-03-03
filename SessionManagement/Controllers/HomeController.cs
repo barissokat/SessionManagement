@@ -31,5 +31,11 @@ namespace SessionManagement.Controllers
                 ViewBag.Message = "Session is " + Session["Owner"];
             return View();
         }
+
+        public ActionResult DisplayOnlineUserCount()
+        {
+            ViewBag.OnlineUserCount = HttpContext.Application["OnlineUserCount"];
+            return View();
+        }
     }
 }
