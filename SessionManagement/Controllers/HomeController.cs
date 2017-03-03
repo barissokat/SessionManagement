@@ -24,7 +24,7 @@ namespace SessionManagement.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = Session["Owner"];
 
             return View();
         }
