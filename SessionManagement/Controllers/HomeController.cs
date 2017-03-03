@@ -10,8 +10,14 @@ namespace SessionManagement.Controllers
     {
         public ActionResult Index()
         {
+            //Sessions
             Session.Add("Owner", "Baris Sokat");
             Session["Owner2"] = "Baris Sokat";
+
+            //Application Objects
+            HttpContext.Application.Add("Owner", "Baris Sokat");
+            HttpContext.Application["Owner2"] = "Baris Sokat";
+
             return View();
         }
 
