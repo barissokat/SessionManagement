@@ -21,5 +21,14 @@ namespace SessionManagement.Controllers
             HttpContext.Request.Cookies.Remove("user");
             return View();
         }
+
+        public ActionResult Control()
+        {
+            if (HttpContext.Request.Cookies["user"] == null)
+                ViewBag.User = "Cookie is null";
+            else
+                ViewBag.User = "Cookie is " + HttpContext.Request.Cookies["user"].Value;
+            return View();
+        }
     }
 }
