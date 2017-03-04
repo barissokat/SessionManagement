@@ -15,5 +15,11 @@ namespace SessionManagement.Controllers
             ViewBag.User = HttpContext.Request.Cookies["user"].Value;
             return View();
         }
+
+        public ActionResult Delete()
+        {
+            HttpContext.Request.Cookies.Remove("user");
+            return View();
+        }
     }
 }
