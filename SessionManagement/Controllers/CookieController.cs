@@ -12,6 +12,7 @@ namespace SessionManagement.Controllers
         {
             HttpCookie cookieUser = new HttpCookie("user", "baris");
             HttpContext.Response.Cookies.Add(cookieUser);
+            ViewBag.User = HttpContext.Request.Cookies["user"].Value;
             return View();
         }
     }
