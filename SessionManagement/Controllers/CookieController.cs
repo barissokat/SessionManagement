@@ -11,6 +11,7 @@ namespace SessionManagement.Controllers
         public ActionResult Create()
         {
             HttpCookie cookieUser = new HttpCookie("user", "baris");
+            cookieUser.Expires = DateTime.Now.AddDays(1);
             HttpContext.Response.Cookies.Add(cookieUser);
             ViewBag.User = HttpContext.Request.Cookies["user"].Value;
             return View();
